@@ -1,6 +1,7 @@
 ### main.py
 
 import pygame
+<<<<<<< HEAD
 pygame.init()
 
 def main():
@@ -20,4 +21,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+=======
+>>>>>>> 5cb968d8c3abfbada15c9d6a4cbbc4439733f73f
 
