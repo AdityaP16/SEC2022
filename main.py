@@ -1,1 +1,3 @@
 ### main.py
+
+import pygame
