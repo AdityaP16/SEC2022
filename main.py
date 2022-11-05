@@ -123,8 +123,6 @@ class Board:
                         self.board[row].append(Piece(row, col, WHITE))
                     elif row == 4 and col == 3:
                         self.board[row].append(Piece(row, col, rand))################this is what we editted
-                    elif row == 4 and col == 5:
-                        self.board[row].append(Piece(row, col, rand))################this is what we editted
                     elif row > 5:
                         self.board[row].append(Piece(row, col, RED))
                     else:
