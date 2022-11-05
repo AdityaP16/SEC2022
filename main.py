@@ -1,26 +1,35 @@
 ### main.py
 
-import pygame
-<<<<<<< HEAD
-pygame.init()
-
-def main():
-    screen = pygame.display.set_mode([500, 500])
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-        
-        
-
-        pygame.draw.circle(screen, (0, 0,  255), (250, 250), 75)
+class power_ups:
     
-    pygame.quit()
+    padding = 13
+    outline = 3
+
+    def __init__(self, row, col, color):
+        self.row = row
+        self.col = col
+        self.color = color
+        self.x = 0
+        self.y = 0
+        self.calc_pos()
 
 
-if __name__ == '__main__':
-    main()
-=======
->>>>>>> 5cb968d8c3abfbada15c9d6a4cbbc4439733f73f
+    def calc_pos(self):
+        self.x = SQUARE_SIZE * col + SQUARE_SIZE // 2
+        self.y = SQUARE_SIZE * row + SQUARE_SIZE // 2
+    
+    def execute(self):
+        if color == red:
+            def shield(self):
+                pass
+        elif color == blue:   
+            def rand_elim(self):
+                pass
+        else:
+            def temp_king(self):
+                pass
 
+
+
+
+# python3 -u "/Users/rajvirsingh/Desktop/SEC2022/main.py"
