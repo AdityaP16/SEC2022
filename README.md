@@ -22,3 +22,4 @@ Repository for Schulich Engineering Competition (SEC), Jr. Programming division 
    -- Temporary shielding: When activated, the player's piece will temporarily be protected from the opponent's attacks.
 
 5) Power-ups are activated when a player moves their piece over the power-up token, similar to the action performed when killing an opponent. Once this power-up is engaged, it will remain in effect until a new power up is activated by another player.
+
