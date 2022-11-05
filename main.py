@@ -130,17 +130,17 @@ class power_ups:
 
 
     def calc_pos(self):
-        self.x = SQUARE_SIZE * col + SQUARE_SIZE // 2
-        self.y = SQUARE_SIZE * row + SQUARE_SIZE // 2
+        self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
+        self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
     
     def execute(self):
-        if color == red:
+        if self.color == 'red':
             def shield(self):
                 pass
-        elif color == blue:   
+        elif self.color == 'blue':   
             def rand_elim(self):
                 pass
-        else:
+        elif self.color == 'white':
             def temp_king(self):
                 pass
 
