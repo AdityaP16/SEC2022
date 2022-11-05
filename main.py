@@ -20,7 +20,6 @@ GREY = (128,128,128)
 class Board:
     def __init__(self):
         self.board = []
-        self.selected_piece = None
         self.red_left = self.white_left = 12
         self.red_kings = self.white_kings = 0
         self.create_board()
@@ -90,6 +89,13 @@ class Piece:
 
     def __repr__(self):
         return str(self.color)
+
+class Game:
+    def __init__(self, win):
+        self.selected = None
+        self.board = Board()
+        self.turn = RED
+        self.valid_moves = {}
 
 
 
