@@ -1,7 +1,6 @@
 ### main.py
 
 import pygame
-<<<<<<< HEAD
 pygame.init()
 
 def main():
@@ -12,7 +11,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         
-        
+        screen.fill((255, 255, 255))
 
         pygame.draw.circle(screen, (0, 0,  255), (250, 250), 75)
     
@@ -21,6 +20,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-=======
->>>>>>> 5cb968d8c3abfbada15c9d6a4cbbc4439733f73f
 
