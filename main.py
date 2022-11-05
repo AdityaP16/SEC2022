@@ -22,7 +22,9 @@ BLACK = (0, 0, 0)
 BLUE = (0, 0, 255)
 GREY = (128,128,128)
 GREEN = (0,255,0)
-colours = [BLUE, RED, GREEN]
+PINK = (255, 182, 193)
+
+colours = [BLUE, PINK, GREEN]
 
 rand = colours[random.randint(0,2)]
 rand2 = colours[random.randint(0,2)]
@@ -120,11 +122,12 @@ class Board:
         for row in range(ROWS):
             self.board.append([])
             for col in range(COLS):
+                rand_powerup = random.randint(0, 1)
                 if col % 2 == ((row +  1) % 2):
                     if row < 3:
                         self.board[row].append(Piece(row, col, WHITE))
-                    elif row == 4 and col == 3:
-                        self.board[row].append(Piece(row, col, rand))################this is what we editted
+                    elif row == 4 and rand_powerup:
+                        self.board[row].append(Piece(row, col, rand))################this is what we edited
                     elif row > 5:
                         self.board[row].append(Piece(row, col, RED))
                     else:
