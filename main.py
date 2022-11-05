@@ -29,6 +29,42 @@ colours = [BLUE, PINK, GREEN]
 rand = colours[random.randint(0,2)]
 rand2 = colours[random.randint(0,2)]
 
+class power_ups:
+    
+    padding = 13
+    outline = 3
+
+    def __init__(self, row, col, color):
+        self.row = row
+        self.col = col
+        self.color = color
+        self.x = 0
+        self.y = 0
+        self.calc_pos()
+
+
+    def calc_pos(self):
+        self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
+        self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
+    
+    def execute(self):
+        if self.color == PINK:
+            def shield(self):
+                pass
+        elif self.color == BLUE:   
+            def rand_elim(self):
+                for piece in pieces:
+                    self.board[piece.row][piece.col] = 0
+                if piece != 0:
+                    if piece.color == RED:
+                        self.red_left -= 1
+                else:
+                    self.white_left -= 1
+    
+        elif self.color == WHITE:
+            def temp_king(self):
+                pass
+
 class Game:
     def __init__(self, win):
         self._init()
@@ -316,33 +352,4 @@ def main():
     pygame.quit()
 
 main()
-
-class power_ups:
-    
-    padding = 13
-    outline = 3
-
-    def __init__(self, row, col, color):
-        self.row = row
-        self.col = col
-        self.color = color
-        self.x = 0
-        self.y = 0
-        self.calc_pos()
-
-
-    def calc_pos(self):
-        self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
-        self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
-    
-    def execute(self):
-        if self.color == 'red':
-            def shield(self):
-                pass
-        elif self.color == 'blue':   
-            def rand_elim(self):
-                pass
-        elif self.color == 'white':
-            def temp_king(self):
-                pass
 
