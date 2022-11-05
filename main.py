@@ -47,23 +47,20 @@ class power_ups:
         self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
         self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
     
-    def execute(self):
+    def execute(self, pieces):
         if self.color == PINK:
-            def shield(self):
                 pass
-        elif self.color == BLUE:   
-            def rand_elim(self):
-                for piece in pieces:
-                    self.board[piece.row][piece.col] = 0
-                if piece != 0:
-                    if piece.color == RED:
-                        self.red_left -= 1
-                else:
-                    self.white_left -= 1
+        elif self.color == BLUE:
+            for piece in pieces:
+                self.board[piece.row][piece.col] = 0
+            if piece != 0:
+                if piece.color == RED:
+                    self.red_left -= 1
+            elif piece.color == WHITE:
+                self.white_left -= 1
     
-        elif self.color == WHITE:
-            def temp_king(self):
-                pass
+        elif self.color == GREEN:
+            pass
 
 class Game:
     def __init__(self, win):
@@ -185,8 +182,16 @@ class Board:
             if piece != 0:
                 if piece.color == RED:
                     self.red_left -= 1
-                else:
+                elif piece.color ==  WHITE:
                     self.white_left -= 1
+                elif piece.color == BLUE:
+                    for piece in pieces:
+                        self.board[random.randint(0,9)][random.randint(0,9)] = 0
+                    if piece != 0:
+                            if piece.color == RED:
+                                self.red_left -= 1
+                            elif piece.color == WHITE:
+                                self.white_left -= 1
     
     def winner(self):
         if self.red_left <= 0:
