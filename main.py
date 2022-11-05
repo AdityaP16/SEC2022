@@ -5,7 +5,7 @@ import pygame
 CROWN = pygame.transform.scale(pygame.image.load('crown.png'), (44,25))
 
 WIDTH, HEIGHT = 800, 800
-ROWS, COLS = 8, 8
+ROWS, COLS = 9, 9
 SQUARE_SIZE = WIDTH//COLS
 FPS = 60
 
@@ -67,7 +67,7 @@ class Game:
             self.turn = WHITE
         else:
             self.turn = RED
-            
+
 class Board:
     def __init__(self):
         self.board = []
@@ -100,7 +100,7 @@ class Board:
                 if col % 2 == ((row + 1) % 2):
                     if row < 3:
                         self.board[row].append(Piece(row,col,WHITE))
-                    elif row > 4:
+                    elif row > 5:
                         self.board[row].append(Piece(row,col,RED))
                     else:
                         self.board[row].append(0)
