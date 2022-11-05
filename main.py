@@ -47,7 +47,7 @@ class power_ups:
         self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
         self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
     
-    def execute(self):
+    def execute(self, pieces):
         if self.color == PINK:
             def shield(self):
                 pass
