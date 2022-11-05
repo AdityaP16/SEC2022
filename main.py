@@ -155,6 +155,19 @@ class Board:
                     for piece in pieces:
                         self.board[random.randint(0,9)][random.randint(0,9)] = 0 ### This is "clear random square power_up"
 
+
+    def add(self, pieces):                                     #### Attempting to create random respawn power up.
+        if self.color == PINK: 
+            for piece in pieces:
+                self.board[piece.row][piece.col] = 0
+            if piece == 0:
+                row = 4
+                col = 5
+                self.board[row].append(Piece(row, col, WHITE))
+            elif piece.color == WHITE:
+                row = 4
+                col = 5
+                self.board[row].append(Piece(row, col, WHITE))
                     
     
     def winner(self):
