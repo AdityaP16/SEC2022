@@ -29,39 +29,6 @@ colours = [BLUE, PINK, GREEN]
 rand = colours[random.randint(0,2)]
 rand2 = colours[random.randint(0,2)]
 
-class power_ups:
-    
-    padding = 13
-    outline = 3
-
-    def __init__(self, row, col, color):
-        self.row = row
-        self.col = col
-        self.color = color
-        self.x = 0
-        self.y = 0
-        self.calc_pos()
-
-
-    def calc_pos(self):
-        self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
-        self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
-    
-    def execute(self, pieces):
-        if self.color == PINK:
-                pass
-        elif self.color == BLUE:
-            for piece in pieces:
-                self.board[piece.row][piece.col] = 0
-            if piece != 0:
-                if piece.color == RED:
-                    self.red_left -= 1
-            elif piece.color == WHITE:
-                self.white_left -= 1
-    
-        elif self.color == GREEN:
-            pass
-
 class Game:
     def __init__(self, win):
         self._init()
@@ -186,12 +153,11 @@ class Board:
                     self.white_left -= 1
                 elif piece.color == BLUE:
                     for piece in pieces:
-                        self.board[random.randint(0,9)][random.randint(0,9)] = 0
-                    if piece != 0:
-                            if piece.color == RED:
-                                self.red_left -= 1
-                            elif piece.color == WHITE:
-                                self.white_left -= 1
+                        self.board[random.randint(0,9)][random.randint(0,9)] = 0 ### This is "clear random square function"
+                elif piece.color == GREEN:
+                    piece.make_king()
+
+                    
     
     def winner(self):
         if self.red_left <= 0:
