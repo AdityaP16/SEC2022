@@ -153,9 +153,7 @@ class Board:
                     self.white_left -= 1
                 elif piece.color == BLUE:
                     for piece in pieces:
-                        self.board[random.randint(0,9)][random.randint(0,9)] = 0 ### This is "clear random square function"
-                elif piece.color == GREEN:
-                    piece.make_king()
+                        self.board[random.randint(0,9)][random.randint(0,9)] = 0 ### This is "clear random square power_up"
 
                     
     
