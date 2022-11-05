@@ -15,11 +15,9 @@ Repository for Schulich Engineering Competition (SEC), Jr. Programming division 
 
 4) During the game random "power-ups" can appear on the board. 
 
-   -- Temporary king: When activated, the player's piece will temporarily hold the power of a piece with king status.
+   -- Random addition: When activated, an additional piece of the player's OR opponent's CAN be added to the gameboard at random.
 
    -- Random elimination: When activated, one of the player's OR opponent's pieces CAN be removed from the gameboard at random.
-
-   -- Temporary shielding: When activated, the player's piece will temporarily be protected from the opponent's attacks.
 
 5) Power-ups are activated when a player moves their piece over the power-up token, similar to the action performed when killing an opponent. Once this power-up is engaged, it will remain in effect until a new power up is activated by another player.
 
